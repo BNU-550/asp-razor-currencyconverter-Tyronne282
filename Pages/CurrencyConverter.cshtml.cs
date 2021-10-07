@@ -11,6 +11,12 @@ namespace CurrencyConverter.Pages
     {
         public void OnGet()
         {
+
+        }
+
+        public void OnPost()
+        {
+
         }
     }
 }

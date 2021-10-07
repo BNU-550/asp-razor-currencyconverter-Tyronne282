@@ -1,4 +1,29 @@
 ﻿@page
 @model CurrencyConverter.Pages.CurrencyConverterModel
 @{
+    ViewData["Title"] = "Currency Converter";
 }
+
+<div>
+    <header class="text-center">
+        <h1 class="display-4">
+            Currency Converter
+        </h1>
+    </header>
+    <br /><br />
+    <form>
+        <div class="form-group">
+            <label for="gbp">GBP</label>
+            <input type="number" class="form-control" id="gbp">
+        </div>
+        <div class="form-group">
+            <label for="japaneseYen">Japanese Yen</label>
+            <input type="number" class="form-control" id="currency">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amount">
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+</div>
