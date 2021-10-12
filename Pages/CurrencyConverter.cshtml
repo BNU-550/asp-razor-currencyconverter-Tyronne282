@@ -11,19 +11,23 @@
         </h1>
     </header>
     <br /><br />
-    <form>
-        <div class="form-group">
-            <label for="gbp">GBP</label>
-            <input type="number" class="form-control" id="gbp">
-        </div>
-        <div class="form-group">
-            <label for="japaneseYen">Japanese Yen</label>
-            <input type="number" class="form-control" id="currency">
-        </div>
-        <div class="form-group">
-            <label for="amount">Amount</label>
-            <input type="number" class="form-control" id="amount">
-        </div>
-        <button type="submit" class="btn btn-primary">Convert</button>
+    <form method="post" class="mx-auto" style="width:200px">
+        <p class="col-sm-2">
+            <label for="input">GBP (£)</label>
+            <input type="number" asp-for="@Model.InputAmount"
+                   step="0.01" placeholder="0.00" required>
+        </p>
+        <p class="col-sm-4">
+            <label for="output">PHP ₱</label>
+            <input type="number" asp-for="@Model.OutputAmount"
+                   placeholder="₱0" value="@Math.Round(Model.OutputAmount)"
+                   readonly>
+        </p>
+        <p class="col-sm-2">
+            <button type="submit" class="btn btn-primary">Convert</button>
+        </p>
+        <p class="col-sm-12">
+            @ViewData["Message"]
+        </p>
     </form>
 </div>
