@@ -11,6 +11,7 @@ namespace CurrencyConverter.Pages
     public class CurrencyConverterModel : PageModel
     {
         public const Double GBP_PHP_RATE = 69.17;
+        public const Double PHP_GBP_RATE = 0.014;
 
         [BindProperty]
         public Double InputAmount { get; set; }
