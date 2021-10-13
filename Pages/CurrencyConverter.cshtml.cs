@@ -45,7 +45,7 @@ namespace CurrencyConverter.Pages
             else if (InputAmount > 0)
             {
                 OutputAmount = InputAmount * GBP_PHP_RATE;
-                ViewData["Message"] = "Amount converted at ratio £1 : ₱69.17.";
+                ViewData["Message"] = "Todays rate is £1 : ₱69.17.";
             }
         }
     }
