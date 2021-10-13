@@ -17,14 +17,11 @@
     <form method="post" class="mx-auto" style="width:200px">
         <p class="col-sm-2">
             <label for="input">GBP (£)</label>
-            <input type="number" asp-for="@Model.InputAmount"
-                   step="0.01" placeholder="0.00" required>
+            <input type="number" asp-for="@Model.InputAmount" step="0.01" placeholder="0.00" required>
         </p>
         <p class="col-sm-4">
             <label for="output">PHP ₱</label>
-            <input type="number" asp-for="@Model.OutputAmount"
-                   placeholder="₱0" value="@Math.Round(Model.OutputAmount)"
-                   readonly>
+            <input type="number" asp-for="@Model.OutputAmount" placeholder="₱0" value="@Math.Round(Model.OutputAmount)" readonly>
         </p>
         <p class="col-sm-2">
             <button type="submit" class="btn btn-primary">Convert</button>
